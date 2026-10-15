@@ -1,16 +1,21 @@
 /* colors */
 :root {
-  --c-offwhite: #fdf5e6;
+  --c-offwhite: #fff7eb;
   --c-pink: #962258;
   --c-pink-light: #d95995;
   --c-darkgray: #5c5c5c;
   --c-lightgray: #a7a5a5;
   --c-bggray: #292929;
 
+  /* new colors for testing */
+  --c-coral: #e76b74;
+  --c-goldenrod: #fdbd56;
+  --c-teal: #86e7b8;
+
   --color-main-bg: var(--c-offwhite);
   --color-text-dark: var(--c-darkgray);
   --color-text-light: var(--c-lightgray);
-  --color-text-pink: var(--c-pink);
+  --color-text-pink: var(--c-goldenrod);
   --color-pink-light: var(--c-pink-light);
   --color-alt-bg: var(--c-bggray);
 
@@ -20,7 +25,7 @@
   --margin-bottom: 300px;
   --big-box-pad: 24px;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: optima, Helvetica, sans-serif;
 
   --alt-font: optima;
 }
@@ -68,14 +73,20 @@ svg {
 
 #hamburger-menu,
 #close-x {
-  width: 40px;
+  width: 80px;
   cursor: pointer;
+}
+
+.menu-icon {
+  fill: #e76b74;
 }
 
 .menu-container {
   display: flex;
   justify-content: end;
   margin-bottom: 24px;
+  margin-top: 8px;
+  margin-right: 8px;
 }
 
 .two-column-container {
@@ -104,11 +115,27 @@ svg {
   /* min-height: calc(100vh - var(--margin-bottom) - var(--margin-exterior)); */
 }
 
+.triple-border {
+  border: 5px solid #86e7b8;
+  border-radius: 96px 16px;
+  box-shadow:
+    0 0 0 5px #e76b74,
+    0 0 0 10px #fdbd56;
+  margin-top: var(--margin-exterior);
+  /* margin-bottom: var(--margin-bottom); */
+  padding: var(--big-box-pad);
+  padding-bottom: 96px;
+}
+
 .menu-popup {
   position: absolute;
-  top: 12px;
-  right: 12px;
-  border: 3px solid var(--color-text-pink);
+  top: 20px;
+  right: 20px;
+  border: 5px solid #fdbd56;
+  border-radius: 96px 16px;
+  box-shadow:
+    0 0 0 5px #e76b74,
+    0 0 0 10px #86e7b8;
   border-radius: 96px 16px;
   display: flex;
   flex-direction: column;
@@ -126,6 +153,7 @@ svg {
   padding-right: 52px;
   display: flex;
   flex-direction: column;
+  text-transform: lowercase;
 }
 
 .hidden {
@@ -183,7 +211,7 @@ svg {
 .titletext {
   color: var(--color-text-dark);
   font-size: 24px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .titletext-layout {
